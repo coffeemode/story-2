@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>حكاية صغيرة...</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #f3eadc;
+      color: #3f3024;
+      font-family: "Arial", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+    }
+
+    .book {
+      width: 100%;
+      max-width: 720px;
+      min-height: 600px;
+      background: #fffaf2;
+      border-radius: 22px;
+      box-shadow: 0 15px 45px rgba(63, 48, 36, 0.15);
+      padding: 45px 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .page {
+      display: none;
+      animation: fade 0.6s ease;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .small-title {
+      text-align: center;
+      font-size: 16px;
+      color: #8c725b;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      margin: 0 0 30px;
+      font-weight: 600;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 2.05;
+      margin: 0 0 20px;
+    }
+
+    .quote {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 30px 0;
+      line-height: 1.9;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: none;
+      background: #634936;
+      color: white;
+      padding: 13px 28px;
+      border-radius: 12px;
+      font-size: 17px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    button.secondary {
+      background: #d8c8b5;
+      color: #3f3024;
+    }
+
+    .question {
+      text-align: center;
+      font-size: 24px;
+      line-height: 1.9;
+      font-weight: bold;
+      margin: 35px 0;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 170px;
+      resize: vertical;
+      border: 1px solid #d8c8b5;
+      border-radius: 14px;
+      padding: 18px;
+      background: #fffdf9;
+      color: #3f3024;
+      font-size: 18px;
+      font-family: inherit;
+      outline: none;
+      line-height: 1.7;
+    }
+
+    textarea:focus {
+      border-color: #8c725b;
+    }
+
+    .thanks {
+      display: none;
+      text-align: center;
+      font-size: 20px;
+      line-height: 2;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 12px;
+      }
+
+      .book {
+        padding: 32px 22px;
+        min-height: 650px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 2;
+      }
+
+      .question {
+        font-size: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="book">
+
+    <!-- الصفحة الأولى -->
+    <section class="page active" id="page1">
+
+      <div>
+        <div class="small-title">حكاية صغيرة...</div>
+
+        <h1>في يومٍ عادي جدًا...</h1>
+
+        <p>
+          في اليوم الذي وصلت فيه القهوة، لم تكن تعرف أن شيئًا بسيطًا كهذا
+          يمكن أن يجعل يومًا عاديًا يبدو مختلفًا.
+        </p>
+
+        <p>
+          كانت تمضي في يومها كعادتها، بين العمل، والأشخاص، والأحاديث التي
+          تأتي وتذهب دون أن تترك أثرًا واضحًا.
+        </p>
+
+        <p>
+          لكن منذ تلك اللحظة، أصبح هناك سؤال صغير يرافقها:
+        </p>
+
+        <div class="quote">
+          "من فعل ذلك؟"
+        </div>
+
+        <p>
+          لم يكن السؤال مهمًا في البداية.
+          لكن الغريب أنها، كلما تذكرت القهوة، تذكرت معها ذلك الشعور الغريب
+          الذي جاء في نفس اللحظة...
+        </p>
+
+        <p>
+          شعور بأن أحدًا انتبه.
+          انتبه لتفصيل صغير ربما لم ينتبه له أحد غيره.
+        </p>
+
+        <p>
+          ومرت الأيام.
+          لم تصل قهوة أخرى.
+          ولم تظهر رسالة.
+          ولم يحدث شيء يمكن أن يعطيها إجابة.
+        </p>
+
+      </div>
+
+      <div class="buttons">
+        <button onclick="nextPage()">التالي</button>
+      </div>
+
+    </section>
+
+
+    <!-- الصفحة الثانية -->
+    <section class="page" id="page2">
+
+      <div>
+        <div class="small-title">حكاية صغيرة...</div>
+
+        <h2>أشياء لا نعرف سببها</h2>
+
+        <p>
+          ومع ذلك، بقيت الحكاية في زاوية صغيرة من ذاكرتها.
+        </p>
+
+        <p>
+          حتى بدأت تلاحظ شيئًا لم تكن تنتبه له من قبل...
+          أن بعض اللحظات العادية في يومها كانت تستحق أن تُحفظ.
+        </p>
+
+        <p>
+          ضحكة خرجت منها دون أن تخطط لها.
+          لحظة شعرت فيها أن يومها أصبح أخف.
+          موقف بسيط جعلها تبتسم.
+        </p>
+
+        <p>
+          وربما كانت أجمل هذه التفاصيل هي تلك الضحكة التي تأتي منها فجأة...
+          تلك التي لا تحتاج إلى سبب كبير.
+        </p>
+
+        <p>
+          ضحكة تجعل اللحظة نفسها تبدو مختلفة.
+        </p>
+
+        <p>
+          وللمرة الأولى، فكرت:
+        </p>
+
+        <div class="quote">
+          "يمكن الشخص اللي أرسل القهوة... كان يعرف هذا الشيء."
+        </div>
+
+        <p>
+          لكنها سرعان ما ضحكت على الفكرة.
+          كيف يمكن لشخص مجهول أن يعرفها أصلًا؟
+        </p>
+
+        <p>
+          وهنا...
+          بدأت الحكاية تأخذ منحى آخر.
+        </p>
+
+      </div>
+
+      <div class="buttons">
+        <button class="secondary" onclick="prevPage()">رجوع</button>
+        <button onclick="nextPage()">التالي</button>
+      </div>
+
+    </section>
+
+
+    <!-- الصفحة الثالثة -->
+    <section class="page" id="page3">
+
+      <div>
+        <div class="small-title">المشهد الأخير</div>
+
+        <h2>من كان وراء الحكاية؟</h2>
+
+        <p>
+          مر وقت كافٍ حتى أصبحت القصة ذكرى لطيفة.
+          شيء حدث ذات يوم...
+          ثم انتهى.
+        </p>
+
+        <p>
+          أو هكذا ظنت.
+        </p>
+
+        <p>
+          في أحد الأيام، كان كل شيء عاديًا جدًا.
+          نفس المكان.
+          نفس اليوم.
+          نفس الوجوه.
+        </p>
+
+        <p>
+          لكن هذه المرة، كان هناك شيء مختلف.
+        </p>
+
+        <p>
+          شخص يقف أمامها.
+        </p>
+
+        <p>
+          شخص لا يحمل قهوة.
+          ولا رسالة.
+          ولا أي شيء يمكن أن يشرح ما يحدث.
+        </p>
+
+        <p>
+          فقط يقف هناك...
+          هادئًا.
+        </p>
+
+        <p>
+          وكأن الحكاية التي بدأت قبل فترة طويلة وصلت أخيرًا إلى آخر صفحة منها.
+        </p>
+
+        <p>
+          وللحظة، لم يحدث شيء.
+        </p>
+
+        <p>
+          ثم جاء ذلك الشعور الغريب مرة أخرى.
+          ذلك الشعور الذي شعرت به يوم وصلت القهوة.
+        </p>
+
+        <p>
+          شعور أن هناك شيئًا تعرفه...
+          لكنّها لا تعرف كيف تعرفه.
+        </p>
+
+        <p>
+          ربما لأن بعض التفاصيل تكشف نفسها دون كلام.
+        </p>
+
+        <div class="quote">
+          نظرة...<br>
+          ابتسامة...<br>
+          ضحكة قصيرة...<br>
+          ولحظة صمت.
+        </div>
+
+        <p>
+          ثم بدأت كل القطع الصغيرة التي لم يكن لها معنى من قبل تأخذ مكانها.
+        </p>
+
+        <p>
+          القهوة.
+          الحكاية.
+          المجهول.
+          والسؤال الذي ظل في رأسها طوال هذا الوقت.
+        </p>
+
+        <div class="quote">
+          "من كان وراء كل ذلك؟"
+        </div>
+
+        <p>
+          وربما في هذه اللحظة بالذات...
+          كانت الإجابة أقرب مما تتوقع.
+        </p>
+
+        <p>
+          لكن الحكاية لم تكن تريد أن تقولها لها.
+          لأن أجمل شيء في بعض القصص...
+          أن تصل إلى النهاية،
+          ثم تترك للقارئ فرصة أن يكتشفها بنفسه.
+        </p>
+
+        <p>
+          ولهذا...
+          لم تكن الصفحة الأخيرة تحتوي على اسم.
+          ولا اعتراف.
+          ولا تفسير.
+        </p>
+
+      </div>
+
+      <div class="buttons">
+        <button class="secondary" onclick="prevPage()">رجوع</button>
+        <button onclick="nextPage()">التالي</button>
+      </div>
+
+    </section>
+
+
+    <!-- الصفحة الأخيرة -->
+    <section class="page" id="page4">
+
+      <div>
+        <div class="small-title">آخر صفحة...</div>
+
+        <h2>وهنا تنتهي الحكاية</h2>
+
+        <p style="text-align:center;">
+          أو ربما لا.
+        </p>
+
+        <p style="text-align:center;">
+          لأن بعض القصص لا تحتاج إلى أن يخبرك أحد بنهايتها...
+        </p>
+
+        <p style="text-align:center;">
+          ربما أنتِ من يكتب آخر سطر فيها.
+        </p>
+
+        <div class="question">
+          لو عرفتِ يومًا من كان وراء هذه الحكاية...<br>
+          ماذا سيكون أول شيء ستقولينه له؟
+        </div>
+
+        <textarea
+          id="answer"
+          placeholder="اكتبي إجابتك هنا..."
+        ></textarea>
+
+        <div class="buttons">
+          <button onclick="sendAnswer()">إرسال</button>
+        </div>
+
+        <div class="thanks" id="thanks">
+          وصلت إجابتك 🤍<br>
+          وربما... هذه ليست نهاية الحكاية فعلًا.
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <script>
+
+    let currentPage = 1;
+
+    function showPage(pageNumber) {
+
+      document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+      });
+
+      document.getElementById("page" + pageNumber).classList.add("active");
+
+      currentPage = pageNumber;
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+    function nextPage() {
+
+      if (currentPage < 4) {
+        showPage(currentPage + 1);
+      }
+
+    }
+
+    function prevPage() {
+
+      if (currentPage > 1) {
+        showPage(currentPage - 1);
+      }
+
+    }
+
+
+    async function sendAnswer() {
+
+      const answer = document.getElementById("answer").value.trim();
+
+      if (!answer) {
+        alert("اكتبي إجابتك أولًا 🤍");
+        return;
+      }
+
+      try {
+
+        const response = await fetch(
+          "https://formspree.io/f/myezgzrp",
+          {
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+
+            body: JSON.stringify({
+              answer: answer
+            })
+          }
+        );
+
+        if (response.ok) {
+
+          document.getElementById("answer").style.display = "none";
+
+          document.querySelector("#page4 .buttons").style.display = "none";
+
+          document.getElementById("thanks").style.display = "block";
+
+        } else {
+
+          alert("صار خطأ بسيط، جربي الإرسال مرة ثانية.");
+
+        }
+
+      } catch (error) {
+
+        alert("تأكدي من اتصال الإنترنت وجربي مرة ثانية.");
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
